@@ -24,15 +24,54 @@
 
 
 
-
+    <script src="script.js"></script>
 
     <script>
-        let test = true;
-        if (test === true) {
-            console.log('+++');
+        // 1.
+        let num1 = Number(prompt('Введите число a'));
+        let num2 = Number(prompt('Введите число b'));
+        if (num1 <= 1) {
+            alert(`Число a = ${num1} меньше или равна 1`);
+            console.log(`Число a = ${num1} меньше или равна 1`);
         } else {
-            console.log('---');
+            alert(`Число a = ${num1} больше 1`);
+            console.log(`Число a = ${num1} больше 1`);
+        };
+        if (num2 >= 3) {
+            alert(`Число b = ${num2} больше или равна 3`);
+            console.log(`Число b = ${num2} больше или равна 3`);
+        } else {
+            alert(`Число b = ${num2} меньше 3`);
+            console.log(`Число b = ${num2} меньше 3`);
+        };
+
+
+
+        // 2.
+        let test = true;
+        console.log((test === true) ? '+++' : '---');
+        alert((test === true) ? '+++' : '---');
+
+        // 3.
+        let dayNum = Number(prompt('Введите число от 1 до 31'));
+        if ((dayNum >= 1) && (dayNum <= 10)) {
+            alert(`Число ${dayNum} попадает в первую декаду`);
+            console.log(`Число ${dayNum} попадает в первую декаду`);
+        } else if ((dayNum >= 11) && (dayNum <= 20)) {
+            alert(`Число ${dayNum} попадает во вторую декаду`);
+            console.log(`Число ${dayNum} попадает во вторую декаду`);
+        } else {
+            alert(`Число ${dayNum} попадает в третью декаду`);
+            console.log(`Число ${dayNum} попадает в третью декаду`);
         }
+
+        // 4.
+        let numChislo = Number(prompt('Введите трех значное число '));
+        let sumEdin = (numChislo % 10);
+        let sumDes = (((numChislo - sumEdin) / 10) % 10);
+        let sumSot = ((((numChislo - sumEdin) / 10) - sumDes) / 10) % 10;
+        alert(`В числе ${numChislo} количество сотен = ${sumSot}, количество десятков =  ${sumDes}, количество единиц = ${sumEdin}.`);
+        console.log(`В числе ${numChislo} количество сотен = ${sumSot}, количество десятков =  ${sumDes}, количество единиц = ${sumEdin}.`);
     </script>
 
 </body>
